@@ -14,9 +14,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            sh 'node -v'
-        }
-    }
 }
