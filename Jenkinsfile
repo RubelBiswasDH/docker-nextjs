@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build Docker image') {
             steps {
-                sh 'docker build -t docker-nexjs .'
+                sh 'docker-compose build'
             }
         }
 
         stage('Run Docker container') {
             steps {
-                sh 'docker-compose up -d'
+                sh 'docker-compose up'
             }
         }
     }
