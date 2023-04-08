@@ -10,8 +10,13 @@ pipeline {
 
         stage('Run Docker container') {
             steps {
-                sh 'docker-compose up'
+                sh 'docker-compose up -d'
             }
+        }
+    }
+    post {
+        always {
+            sh 'docker-compose down'
         }
     }
 }
