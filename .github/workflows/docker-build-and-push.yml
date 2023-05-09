@@ -19,7 +19,7 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_KEY }}
+      NEXT_PUBLIC_KEY: ${{ env.NEXT_PUBLIC_KEY }}
     steps:  
       - name: Check out the repo
         uses: actions/checkout@v3
