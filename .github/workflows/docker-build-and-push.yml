@@ -19,6 +19,9 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
+      - name: Set environment variable
+        run: echo 'NEXT_PUBLIC_KEY=${{ secrets.DOCKER_USERNAME }}' >> $GITHUB_ENV
+        
       - name: Check out the repo
         uses: actions/checkout@v3
       
