@@ -20,7 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set environment variable
-        run: echo 'NEXT_PUBLIC_KEY=${{ secrets.DOCKER_USERNAME }}' >> $GITHUB_ENV
+        run: |
+          touch .env
+          echo NEXT_PUBLIC_KEY=${{ secrets.DOCKER_USERNAME }} >> .env
         
       - name: Check out the repo
         uses: actions/checkout@v3
