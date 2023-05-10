@@ -22,7 +22,7 @@ jobs:
       NEXT_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_KEY }}
       branch: "$(basename ${GITHUB_REF})"
 
-    environment: ${{ github.ref.replace('refs/heads/', '') }}
+    environment: `${{ github.ref.replace('refs/heads/', '') }}`
 
     steps:  
       - name: Print branch name
