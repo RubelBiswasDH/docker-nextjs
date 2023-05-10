@@ -77,4 +77,4 @@ jobs:
             NEXT_PUBLIC_KEY=${{ env.NEXT_PUBLIC_KEY }}
             NEXT_PUBLIC_VAR=${{ vars.NEXT_PUBLIC_VAR }}
           tags: ${{ steps.meta-stg.outputs.tags }}
-          labels: ${{ steps.meta-stg.outputs.labels }
+          labels: ${{ steps.meta-stg.outputs.labels }}
