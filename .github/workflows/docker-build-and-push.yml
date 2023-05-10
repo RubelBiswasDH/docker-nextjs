@@ -23,7 +23,7 @@ jobs:
       branch: "$(basename ${GITHUB_REF})"
 
     environment: 
-      name: ${{ "${GITHUB_REF_NAME}" }}
+      name: ${{ GITHUB_REF_NAME }}
 
     steps:  
       - name: Print branch name
