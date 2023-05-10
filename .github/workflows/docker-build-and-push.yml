@@ -28,7 +28,6 @@ jobs:
     steps:  
       - name: Print branch name
         run: echo "Branch name is ${{ github.ref }}"
-        run: echo "Branch name is ${{ env.branch }}"
 
       - name: Check out the repo
         uses: actions/checkout@v3
