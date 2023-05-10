@@ -2,5 +2,7 @@ version: '3'
 services:
   web:
     image: rubelbiswas/docker-nextjs:main
+    container_name: docker-nextjs
+    restart: unless-stopped
     ports:
       - "8082:3000"
