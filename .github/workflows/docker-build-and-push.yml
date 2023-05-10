@@ -23,7 +23,7 @@ jobs:
       branch: ${{ github.ref }}
 
     environment:
-      name: ${{ env.branch }}
+      name: ${{ github.ref }}
 
     steps:  
       - name: Print branch name
