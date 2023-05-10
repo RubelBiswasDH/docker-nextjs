@@ -29,9 +29,9 @@ jobs:
       - name: Print branch name
         run: |
           echo "Branch name is $(basename ${GITHUB_REF})"
-          echo "Ref Name ${{ vars.GITHUB_REF_NAME }}"
-          echo "GITHUB_BASE_REF ${{ vars.GITHUB_BASE_REF }}"
-          echo "GITHUB_HEAD_REF ${{ vars.GITHUB_HEAD_REF }}"
+          echo "Ref Name ${GITHUB_REF_NAME}"
+          echo "GITHUB_BASE_REF ${GITHUB_BASE_REF}"
+          echo "GITHUB_HEAD_REF ${GITHUB_HEAD_REF}"
 
       - name: Check out the repo
         uses: actions/checkout@v3
