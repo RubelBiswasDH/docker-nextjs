@@ -20,14 +20,14 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_KEY }}
-      branch: $(basename ${GITHUB_REF})
+      branch: ${{ $(basename ${GITHUB_REF}) }}
 
     environment:
-      name: $(basename ${GITHUB_REF})
+      name: ${{ $(basename ${GITHUB_REF}) }}
 
     steps:  
       - name: Print branch name
-        run: echo "Branch name is $(basename ${GITHUB_REF})"
+        run: echo "Branch name is ${{ $(basename ${GITHUB_REF}) }}"
 
       - name: Check out the repo
         uses: actions/checkout@v3
