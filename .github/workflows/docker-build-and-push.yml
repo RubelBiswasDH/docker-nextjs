@@ -20,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_KEY }}
+    environment:
+      name: dev
     steps:  
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -43,5 +45,6 @@ jobs:
           push: true
           build-args: |
             NEXT_PUBLIC_KEY=${{ env.NEXT_PUBLIC_KEY }}
+            NEXT_PUBLIC_VAR=${{ vars.NEXT_PUBLIC_VAR }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
