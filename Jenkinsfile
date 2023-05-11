@@ -15,9 +15,9 @@ pipeline {
 
         stage('Dev - Pull Docker image') {
             steps {
-                // sh 'cd /home/rubel/Codebase/Docker/docker-ls/docker-nextjs-stg'
                 sh 'pwd'
                 sh 'whoami'
+                sh 'cd /home/rubel/Codebase/Docker/docker-ls/docker-nextjs-stg'
                 sh 'docker-compose down'
                 sh 'docker-compose pull'
             }
