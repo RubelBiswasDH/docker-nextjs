@@ -2,10 +2,25 @@ pipeline {
     agent any
 
     stages {
-        stage('Build Docker image') {
+        stage('Pull Docker image') {
+            when {
+                branch 'main'
+            }
             steps {
+                sh 'cd /home/rubel/Codebase/Docker/docker-ls/docker-nextjs'
                 sh 'docker-compose down'
-                sh 'docker-compose build --no-cache'
+                sh 'docker-compose pull'
+            }
+        }
+
+        stage('Dev - Pull Docker image') {
+            when {
+                branch 'dev'
+            }
+            steps {
+                sh 'cd /home/rubel/Codebase/Docker/docker-ls/docker-nextjs-stg'
+                sh 'docker-compose down'
+                sh 'docker-compose pull'
             }
         }
 
