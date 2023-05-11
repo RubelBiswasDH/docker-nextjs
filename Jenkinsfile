@@ -15,7 +15,7 @@ pipeline {
 
         stage('Dev - Pull Docker image') {
             steps {
-                sh 'cd /home/rubel/Codebase/Docker/docker-ls/docker-nextjs-stg'
+                // sh 'cd /home/rubel/Codebase/Docker/docker-ls/docker-nextjs-stg'
                 sh 'docker-compose down'
                 sh 'docker-compose pull'
             }
