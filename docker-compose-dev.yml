@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  web:
+    image: rubelbiswas/docker-nextjs:dev
+    container_name: docker-nextjs-srg
+    restart: unless-stopped
+    ports:
+      - "8084:3000"
