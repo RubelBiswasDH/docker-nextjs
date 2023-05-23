@@ -8,7 +8,7 @@ ENV NEXT_PUBLIC_VAR=${NEXT_PUBLIC_VAR}
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json ./
 
 RUN npm install
 
